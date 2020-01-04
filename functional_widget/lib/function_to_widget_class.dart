@@ -212,7 +212,7 @@ class FunctionalWidgetGenerator
   }
 
   String _getFallbackElementDiagnostic(ParameterElement element) =>
-      'DiagnosticsProperty<${element.type.isUndefined ? findBeginToken(element) : element.type.displayName}>';
+      'DiagnosticsProperty<${/*FixMe #1: element.type.isUndefined*/ false ? findBeginToken(element) : element.type.displayName}>';
 
   String _tryParseFunctionToDiagnostic(
       ParameterElement element, String propertyType) {

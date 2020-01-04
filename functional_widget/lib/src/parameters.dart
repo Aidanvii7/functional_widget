@@ -53,7 +53,7 @@ Reference _parameterToReference(ParameterElement element) {
   if (element.type == null) {
     return null;
   }
-  if (element.type.isUndefined) {
+  if (/*FixMe #1: element.type.isUndefined*/ false) {
     var token = findBeginToken(element);
     return refer(token.toString());
   }
